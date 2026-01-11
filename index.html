@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor MG | Tecnologia e Educação</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #6B3B6F; /* Roxo Identidade */
+            --accent: #FF8A65;  /* Laranja Identidade */
+            --dark: #2d2d2d;
+            --light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* HERO SECTION (Topo com Foto) */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #4a294d 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 50px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 10px; }
+        .hero p { font-size: 1.1em; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .social-links { margin-top: 20px; }
+        .social-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-btn:hover { background: var(--accent); transform: translateY(-3px); }
+
+        /* CONTAINER PRINCIPAL */
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* SEÇÃO SOBRE */
+        .about-section { text-align: center; margin-bottom: 50px; }
+        .about-section h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.8em; }
+        .about-text { max-width: 700px; margin: 0 auto; color: #555; }
+
+        /* GRID DE PROJETOS */
+        .projects-title { text-align: center; margin-bottom: 30px; font-size: 1.5em; font-weight: 600; color: #333; }
+        
+        .projects-grid {
+            display: flex; /* Mudado para Flex para centralizar melhor apenas 2 itens */
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-top: 5px solid transparent;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px; /* Tamanho máximo do card */
+        }
+
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        /* Cores específicas para cada card */
+        .card-ded { border-color: var(--primary); }
+        .card-doc { border-color: var(--accent); }
+
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; align-items: flex-start; }
+        
+        .card-icon { 
+            font-size: 2em; 
+            margin-bottom: 15px; 
+            background: var(--light);
+            width: 60px; height: 60px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+        }
+        .card-ded .card-icon { color: var(--primary); }
+        .card-doc .card-icon { color: var(--accent); }
+
+        .card-title { font-size: 1.2em; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+        .card-desc { font-size: 0.9em; color: #666; margin-bottom: 20px; flex-grow: 1; }
+
+        .btn-card {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-ded { background-color: var(--primary); color: white; }
+        .btn-doc { background-color: var(--accent); color: white; }
+        
+        .btn-card:hover { opacity: 0.9; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 30px; color: #888; font-size: 0.85em; border-top: 1px solid #eee; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <img src="perfil.jpg" alt="Foto Stênio" class="profile-img">
+            
+            <h1>Olá, sou o Stênio!</h1>
+            <p>Professor da Rede Estadual de MG & Entusiasta de Tecnologia.</p>
+            <p style="margin-top: 10px; font-size: 0.95em;">"Descomplicando a burocracia escolar."</p>
+            
+            <div class="social-links">
+                <a href="LINK_DO_SEU_YOUTUBE" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+                <a href="LINK_DO_SEU_TIKTOK" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                <a href="LINK_DO_SEU_INSTAGRAM" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:seuemail@exemplo.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="about-section">
+            <h2>Minha Missão</h2>
+            <p class="about-text">
+                Sou professor da rede estadual assim como você. Criei o projeto <b>Professor MG</b> para provar que a tecnologia deve ser nossa aliada, não inimiga. Aqui você encontra ferramentas práticas, sem custo e direto ao ponto para facilitar nosso dia a dia na sala de aula (e fora dela).
+            </p>
+        </section>
+
+        <h3 class="projects-title">Ferramentas Disponíveis</h3>
+        
+        <div class="projects-grid">
+            
+            <div class="project-card card-ded">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="card-title">DED+ Mobile</h3>
+                    <p class="card-desc">O aplicativo definitivo para acessar o Diário Escolar Digital. Tela cheia, sem barra de endereços e com correção de bugs de login.</p>
+                    <a href="https://ded.professormg.com.br" class="btn-card btn-ded">Baixar App</a>
+                </div>
+            </div>
+
+            <div class="project-card card-doc">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="card-title">Central de Documentos</h3>
+                    <p class="card-desc">Checklist completo para contratação. Baixe os modelos de atestados, anexos e acesse os links das certidões em um só lugar.</p>
+                    <a href="https://documentos.professormg.com.br" class="btn-card btn-doc">Acessar Documentos</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Professor MG | Techbox Academy</p>
+        <p>Desenvolvido com <i class="fas fa-heart" style="color: var(--accent);"></i> para a educação mineira.</p>
+    </footer>
+
+</body>
+</html>
