@@ -14,6 +14,7 @@
             --accent: #FF8A65;  /* Laranja Identidade */
             --dark: #2d2d2d;
             --light: #f8f9fa;
+            --calc-color: #2e7d32; /* Cor verde para a calculadora */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,7 +58,7 @@
         }
         .social-btn:hover { background: var(--accent); transform: translateY(-3px); }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         .about-section { text-align: center; margin-bottom: 50px; }
         .about-section h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.8em; }
@@ -68,7 +69,7 @@
         
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             padding-bottom: 50px;
             justify-items: center;
@@ -92,7 +93,8 @@
         /* Cores dos cards */
         .card-ded { border-color: var(--primary); }
         .card-doc { border-color: var(--accent); }
-        .card-plan { border-color: #4A90E2; } /* Cor azul para diferenciar o novo projeto */
+        .card-plan { border-color: #4A90E2; }
+        .card-calc { border-color: var(--calc-color); } /* Nova classe */
 
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; align-items: flex-start; }
         
@@ -107,6 +109,7 @@
         .card-ded .card-icon { color: var(--primary); }
         .card-doc .card-icon { color: var(--accent); }
         .card-plan .card-icon { color: #4A90E2; }
+        .card-calc .card-icon { color: var(--calc-color); } /* Nova classe */
 
         .card-title { font-size: 1.2em; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
         .card-desc { font-size: 0.9em; color: #666; margin-bottom: 20px; flex-grow: 1; }
@@ -127,6 +130,7 @@
         .btn-ded { background-color: var(--primary); }
         .btn-doc { background-color: var(--accent); }
         .btn-plan { background-color: #4A90E2; }
+        .btn-calc { background-color: var(--calc-color); } /* Nova classe */
         
         .btn-card:hover { opacity: 0.9; }
 
@@ -167,6 +171,15 @@
                     <h3 class="card-title">DED+ Mobile</h3>
                     <p class="card-desc">Acesso otimizado ao Diário Escolar Digital. Tela cheia e correção de bugs para facilitar seus registros.</p>
                     <a href="https://ded.professormg.com.br" class="btn-card btn-ded">Conhecer App</a>
+                </div>
+            </div>
+
+            <div class="project-card card-calc">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                    <h3 class="card-title">Calculadora de Aulas</h3>
+                    <p class="card-desc">Gere listagens de datas por trimestre automaticamente, descontando recessos e feriados da SEE/MG. Exporte em PDF.</p>
+                    <a href="https://calculadora.professormg.com.br" class="btn-card btn-calc">Calcular Aulas</a>
                 </div>
             </div>
 
